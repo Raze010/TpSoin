@@ -8,27 +8,27 @@ namespace Prestations_soins
 {
     class Prestation
     {
-        private int libellé;
-        private string dateHeureSoin; // 11/09/2015 12:00
+        private int libelle;
+        private DateTime dateHeureSoin; // 11/09/2015 12:00
 
-        public int Libellé { get => libellé; }
+        public int Libelle { get => libelle; }
 
-        public string DateHeureSoin { get => dateHeureSoin; }
+        public DateTime DateHeureSoin { get => dateHeureSoin; }
 
         private Intervenant intervenant;
 
         public Intervenant Intervenant { get => intervenant; }
 
-        public Prestation (Intervenant intervenant, int libellé, string dateHeureSoin)
+        public Prestation (Intervenant intervenant, int libelle, DateTime dateHeureSoin)
         {
             this.intervenant = intervenant;
-            this.libellé = libellé;
+            this.libelle = libelle;
             this.dateHeureSoin = dateHeureSoin;
         }
 
-        public void compareTo(Prestation prestation)
+        public int compareTo(Prestation prestation)
         {
-
+            return DateTime.Compare(dateHeureSoin,prestation.DateHeureSoin);
         }
     }
 }

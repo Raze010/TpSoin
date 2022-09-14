@@ -1,0 +1,7 @@
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\bin\Debug\Prestations soins.exe.config
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\bin\Debug\Prestations soins.exe
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\bin\Debug\Prestations soins.pdb
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\obj\Debug\Prestations soins.csproj.AssemblyReference.cache
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\obj\Debug\Prestations soins.csproj.CoreCompileInputs.cache
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\obj\Debug\Prestations soins.exe
+C:\Users\rayane.bosso\Documents\GitHub\TpSoin\Prestations soins\Prestations soins\obj\Debug\Prestations soins.pdb
