@@ -8,11 +8,27 @@ namespace Prestations_soins
 {
     class Dossier
     {
+        private DateTime dateCreation;
+
+        public DateTime DateCreation { get => dateCreation; }
+
         public Dossier (string nom,string prenom,DateTime dateNaissance)
         {
             this.nom = nom;
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;
+
+            dateCreation = DateTime.Today;
+        }
+
+        public Dossier(string nom,string prenom,DateTime dateNaissance,DateTime dateCreation) : this(nom,prenom,dateNaissance)
+        {
+            if (dateCreation > DateTime.Today )
+            {
+                throw new System.Exception("La date de creation est invalide");
+            }
+
+            this.dateCreation = dateCreation;
         }
 
         private string nom, prenom;
@@ -29,6 +45,9 @@ namespace Prestations_soins
 
         public void ajoutePrestation (Prestation prestation)
         {
+            if (prestation.DateHeureSoin < DateCreation)
+                throw new Exception("La date de prestation est antérieur a la date de création");
+
             prestations.Add(prestation);
         }
 
@@ -79,16 +98,13 @@ namespace Prestations_soins
 
             dates.Sort();
 
-            DateTime plusGrandeDate = dates[0];
-
             int compteur = 1;
     
             for (int i = 1;  i < dates.Count; i++)
             {
-                if (dates[i] > plusGrandeDate)
+                if (dates[i] > dates[i - 1])
                 {
                     compteur += 1;
-                    plusGrandeDate = dates[i];
                 }
             }
 

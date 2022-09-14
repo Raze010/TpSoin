@@ -25,5 +25,10 @@ namespace Prestations_soins
         {
             prestations.Add(prestation);
         }
+
+        public int GetNbPrestations ()
+        {
+            return this.prestations.Count;
+        }
     }
 }
